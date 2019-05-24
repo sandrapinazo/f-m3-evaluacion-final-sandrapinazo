@@ -1,6 +1,7 @@
 import React from "react";
 import CharacterCard from "../CharacterCard";
-import propTypes from 'prop-types';
+import propTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function CharacterList(props) {
   return (
@@ -9,7 +10,13 @@ function CharacterList(props) {
       {props.data.map(item => {
         return (
           <li key={item.id}>
-            <CharacterCard name={item.name} house={item.house} image={item.image}/>
+            <Link to={`/${item.id}`}>
+              <CharacterCard
+                name={item.name}
+                house={item.house}
+                image={item.image}
+              />
+            </Link>
           </li>
         );
       })}
@@ -18,7 +25,7 @@ function CharacterList(props) {
 }
 
 CharacterList.propTypes = {
-    data: propTypes.arrayOf(propTypes.object).isRequired,
-}
+  data: propTypes.arrayOf(propTypes.object).isRequired,
+};
 
 export default CharacterList;
