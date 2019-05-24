@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import CharacterList from './components/CharacterList';
 
@@ -12,6 +11,25 @@ class App extends React.Component {
     }
   }
 
+  componentDidMount(){
+    this.getData();
+  }
+
+  getData(){
+    fetch('http://hp-api.herokuapp.com/api/characters')
+      .then(response=>response.json())
+      .then(data=>{
+        const newData = data.map((item,index)=> {
+          return ({...item, id: index +1});
+        });
+        console.log(data);
+        return(
+          this.setState({
+            characters: newData,
+          })
+        );
+      });
+  }
 
   render() {
     return (
@@ -20,7 +38,7 @@ class App extends React.Component {
           <h1>Harry Potter Characters</h1>
         </header>
         <main>
-          <CharacterList/>
+        <CharacterList data= {this.state.characters}/>
         </main>
       </div>
     );
