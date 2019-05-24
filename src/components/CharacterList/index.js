@@ -18,7 +18,7 @@ function CharacterList(props) {
 }
 
 CharacterList.propTypes = {
-    data: propTypes.array.isRequired,
+    data: propTypes.arrayOf(propTypes.object).isRequired,
 }
 
 export default CharacterList;
