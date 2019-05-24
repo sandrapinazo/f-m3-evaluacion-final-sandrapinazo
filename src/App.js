@@ -8,8 +8,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      filter: ""
+      filter: '',
     };
+    this.setFilter = this.setFilter.bind(this);
   }
 
   componentDidMount() {
@@ -31,7 +32,9 @@ class App extends React.Component {
   }
 
   setFilter (event) {
-    console.log(event.target.value);
+    return this.setState({
+      filter: event.target.value,
+    });
   }
 
   render() {
@@ -42,7 +45,7 @@ class App extends React.Component {
         </header>
         <main>
           <Filter handler={this.setFilter} />
-          <CharacterList data={this.state.characters} />
+          <CharacterList data={this.state.characters.filter(item => item.name.toUpperCase().includes(this.state.filter.toUpperCase()))} />
         </main>
       </div>
     );
