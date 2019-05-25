@@ -1,0 +1,9 @@
+.Filter__input {
+    border: none;
+    background-color: #404f54;
+    margin-left: 5px; 
+    padding: 2px 5px;
+    &::placeholder {
+        color: rgb(165, 164, 164);
+    }
+}

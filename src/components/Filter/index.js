@@ -1,11 +1,12 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import './styles.scss'
 
 function Filter(props) {
     return(
         <form>
             <label htmlFor='filter'>Search character:</label>
-            <input name='filter' id='filter' type='text' onChange={props.handler} value={props.value}/>
+            <input className='Filter__input' name='filter' id='filter' type='text' onChange={props.handler} value={props.value} placeholder="Harry Potter" />
         </form>
     );
 }
