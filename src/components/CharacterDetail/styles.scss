@@ -1,0 +1,69 @@
+.CharacterDetails__page {
+    width: 100vw;
+    //height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media all and (min-width:768px){
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.CharacterDetails__image {
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center top;
+    @media all and (min-width:768px){
+        width: 40%;
+        height: 100vh;
+    }
+}
+
+.CharacterDetails__back {
+    padding: 2px 5px;
+    text-decoration: none;
+    color: #404f54;
+    border: 1px solid #404f54;
+    font-size: 14px;
+}
+
+.CharacterDetails__info {
+    width: 60%;
+    padding: 10px 50px;
+    text-align: left;
+    font-size: 20px;
+}
+
+.CharacterDetails__name {
+    margin: 10px;
+    font-family: 'Seaweed Script', cursive;
+    font-size: 70px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.CharacterDetails__house {
+    width: 150px;
+    height: 182px;
+    margin: auto;
+    background-image: url('https://i.pinimg.com/originals/d2/30/88/d23088c295c2c703a9be63cc9f6a0408.png');
+    background-size: 300px;
+}
+
+.Gryffindor__crest {
+    background-position: top left;
+}
+.Slytherin__crest {
+    background-position: bottom right;
+}
+.Hufflepuff__crest {
+    background-position: bottom left;
+}
+.Ravenclaw__crest {
+    background-position: top right;
+}
+.hidden {
+    display: none;
+}

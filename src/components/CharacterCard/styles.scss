@@ -1,0 +1,87 @@
+.CharacterCard__card {
+  width: 200px;
+  margin: 10px;
+  padding: 0;
+  border: 1px solid black;
+  color: black;
+  background-color: #404f54;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.CharacterCard__image {
+  width: 190px;
+  height: 250px;
+  margin: 5px;
+  background-position: top center;
+  background-size: cover;
+}
+
+.CharacterCard__name {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.CharacterCard__p {
+  margin: 0 0 10px;
+  padding: 2px;
+  font-family: 'Seaweed Script', cursive;
+  //font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  //font-weight: bolder;
+}
+
+.Gryffindor {
+  background: repeating-linear-gradient(
+    45deg,
+    #a5831a,
+    #a5831a 3px,
+    #6d0000 3px,
+    #6d0000 9px,
+    #a5831a 9px,
+    #a5831a 10px,
+    #6d0000 10px,
+    #6d0000 30px,
+  );
+}
+
+.Slytherin {
+  background: repeating-linear-gradient(
+    45deg,
+    #686868,
+    #686868 3px,
+    #0a3506 3px,
+    #0a3506 9px,
+    #686868 9px,
+    #686868 10px,
+    #0a3506 10px,
+    #0a3506 30px,
+  );
+}
+
+.Ravenclaw {
+  background: repeating-linear-gradient(
+    45deg,
+    #686868,
+    #686868 3px,
+    #061738 3px,
+    #061738 9px,
+    #686868 9px,
+    #686868 10px,
+    #061738 10px,
+    #061738 30px,
+  );
+}
+
+.Hufflepuff {
+  background: repeating-linear-gradient(
+    45deg,
+    #2a2b2b,
+    #2a2b2b 3px,
+    #a5831a 3px,
+    #a5831a 9px,
+    #2a2b2b 9px,
+    #2a2b2b 10px,
+    #a5831a 10px,
+    #a5831a 30px,
+  );
+}

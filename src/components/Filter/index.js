@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 function Filter(props) {
     return(
         <form>
-            <label htmlFor='filter'>Search character</label>
+            <label htmlFor='filter'>Search character:</label>
             <input name='filter' id='filter' type='text' onChange={props.handler} value={props.value}/>
         </form>
     );

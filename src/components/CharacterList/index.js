@@ -2,15 +2,15 @@ import React from "react";
 import CharacterCard from "../CharacterCard";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
+import './styles.css'
 
 function CharacterList(props) {
   return (
-    <ul>
-      <p>Lista</p>
+    <ul className="CharacterList__list">
       {props.data.map(item => {
         return (
-          <li key={item.id}>
-            <Link to={`/${item.id}`}>
+          <li key={item.id} >
+            <Link to={`/${item.id}`} className="CharacterList__link">
               <CharacterCard
                 name={item.name}
                 house={item.house}

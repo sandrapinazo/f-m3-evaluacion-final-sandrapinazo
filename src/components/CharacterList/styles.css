@@ -1,0 +1,12 @@
+.CharacterList__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.CharacterList__link {
+    text-decoration: none;
+}
