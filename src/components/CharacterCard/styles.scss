@@ -1,3 +1,5 @@
+@import '../../scss/colors';
+
 .CharacterCard__card {
   width: 200px;
   margin: 10px;
@@ -6,6 +8,10 @@
   color: black;
   background-color: #404f54;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.7);
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  }
 }
 
 .CharacterCard__image {
@@ -17,7 +23,7 @@
 }
 
 .CharacterCard__name {
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px 0;
 }
 
@@ -25,63 +31,94 @@
   margin: 0 0 10px;
   padding: 2px;
   font-family: 'Seaweed Script', cursive;
-  //font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  //font-weight: bolder;
+  color: $header-title-color;
 }
 
 .Gryffindor {
   background: repeating-linear-gradient(
     45deg,
-    #a5831a,
-    #a5831a 3px,
-    #6d0000 3px,
-    #6d0000 9px,
-    #a5831a 9px,
-    #a5831a 10px,
-    #6d0000 10px,
-    #6d0000 30px,
+    $gryffindor-gold,
+    $gryffindor-gold 3px,
+    $gryffindor-red 3px,
+    $gryffindor-red 9px,
+    $gryffindor-gold 9px,
+    $gryffindor-gold 10px,
+    $gryffindor-red 10px,
+    $gryffindor-red 30px,
+    $gryffindor-gold 30px,
+    $gryffindor-gold 33px,
+    $gryffindor-red 33px,
+    $gryffindor-red 39px,
+    $gryffindor-gold 39px,
+    $gryffindor-gold 40px,
+    $gryffindor-red 40px,
+    $gryffindor-red 120px,
   );
 }
 
 .Slytherin {
   background: repeating-linear-gradient(
     45deg,
-    #686868,
-    #686868 3px,
-    #0a3506 3px,
-    #0a3506 9px,
-    #686868 9px,
-    #686868 10px,
-    #0a3506 10px,
-    #0a3506 30px,
+    $slytherin-grey,
+    $slytherin-grey 3px,
+    $slytherin-green 3px,
+    $slytherin-green 9px,
+    $slytherin-grey 9px,
+    $slytherin-grey 10px,
+    $slytherin-green 10px,
+    $slytherin-green 30px,
+    $slytherin-grey 30px,
+    $slytherin-grey 33px,
+    $slytherin-green 33px,
+    $slytherin-green 39px,
+    $slytherin-grey 39px,
+    $slytherin-grey 40px,
+    $slytherin-green 40px,
+    $slytherin-green 120px,
   );
 }
 
 .Ravenclaw {
   background: repeating-linear-gradient(
     45deg,
-    #686868,
-    #686868 3px,
-    #061738 3px,
-    #061738 9px,
-    #686868 9px,
-    #686868 10px,
-    #061738 10px,
-    #061738 30px,
+    $ravenclaw-grey,
+    $ravenclaw-grey 3px,
+    $ravenclaw-blue 3px,
+    $ravenclaw-blue 9px,
+    $ravenclaw-grey 9px,
+    $ravenclaw-grey 10px,
+    $ravenclaw-blue 10px,
+    $ravenclaw-blue 30px,
+    $ravenclaw-grey 30px,
+    $ravenclaw-grey 33px,
+    $ravenclaw-blue 33px,
+    $ravenclaw-blue 39px,
+    $ravenclaw-grey 39px,
+    $ravenclaw-grey 40px,
+    $ravenclaw-blue 40px,
+    $ravenclaw-blue 120px,
   );
 }
 
 .Hufflepuff {
   background: repeating-linear-gradient(
     45deg,
-    #2a2b2b,
-    #2a2b2b 3px,
-    #a5831a 3px,
-    #a5831a 9px,
-    #2a2b2b 9px,
-    #2a2b2b 10px,
-    #a5831a 10px,
-    #a5831a 30px,
+    $hufflepuff-black,
+    $hufflepuff-black 3px,
+    $hufflepuff-gold 3px,
+    $hufflepuff-gold 9px,
+    $hufflepuff-black 9px,
+    $hufflepuff-black 10px,
+    $hufflepuff-gold 10px,
+    $hufflepuff-gold 30px,
+    $hufflepuff-black 30px,
+    $hufflepuff-black 33px,
+    $hufflepuff-gold 33px,
+    $hufflepuff-gold 39px,
+    $hufflepuff-black 39px,
+    $hufflepuff-black 40px,
+    $hufflepuff-gold 40px,
+    $hufflepuff-gold 120px,
   );
 }

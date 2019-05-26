@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import "./App.css";
-import CharacterList from "./components/CharacterList";
-import Filter from "./components/Filter";
-import CharacterDetail from "./components/CharacterDetail";
+import "./styles.scss";
+import CharacterList from "../CharacterList";
+import Filter from "../Filter";
+import CharacterDetail from "../CharacterDetail";
 
 class App extends React.Component {
   constructor(props) {
@@ -65,7 +65,6 @@ class App extends React.Component {
             <Route
               path="/:id"
               render={routerProps => {
-                console.log(routerProps, this.state.characters);
                 return (
                   <CharacterDetail
                     data={this.state.characters.find(

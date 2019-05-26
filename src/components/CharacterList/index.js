@@ -2,7 +2,7 @@ import React from "react";
 import CharacterCard from "../CharacterCard";
 import propTypes from "prop-types";
 import { Link } from "react-router-dom";
-import './styles.css'
+import './styles.scss'
 
 function CharacterList(props) {
   return (

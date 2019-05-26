@@ -6,7 +6,6 @@ import './styles.scss'
 function CharacterDetails(props) {
   if (!props.data) { return ('Loading...')}
   else {
-    console.log(props);
     const { name, house, yearOfBirth, image, alive, patronus } = props.data;
     return (
       <div className='CharacterDetails__page'>
@@ -26,7 +25,7 @@ function CharacterDetails(props) {
 
 
 CharacterDetails.propTypes={
-    data: propTypes.object.isRequired,
+    data: propTypes.object,
 }
 
 export default CharacterDetails;
