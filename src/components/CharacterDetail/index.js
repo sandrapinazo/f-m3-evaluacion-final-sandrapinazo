@@ -13,9 +13,8 @@ function CharacterDetails(props) {
         <section className='CharacterDetails__info'>
         <h1 className='CharacterDetails__name'>{name}</h1>
         <div className={house? `CharacterDetails__house ${house}__crest`: 'hidden'}></div>
-        <p>Year of birth: {yearOfBirth}</p>
+        <p>Year of birth: {yearOfBirth} {alive? <i class="fas fa-heartbeat"></i>: <i class="fas fa-book-dead"></i> }</p>
         <p>Patronus: {patronus}</p>
-        <p>State: {alive? 'Alive at the end of the saga': 'Dead at the end of the saga' }</p>
         <Link className='CharacterDetails__back' to='/'>༄  Go back</Link>
         </section>
       </div>
