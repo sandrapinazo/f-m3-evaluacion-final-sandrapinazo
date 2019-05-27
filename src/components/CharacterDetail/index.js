@@ -16,7 +16,7 @@ function CharacterDetails(props) {
         <p>Year of birth: {yearOfBirth}</p>
         <p>Patronus: {patronus}</p>
         <p>State: {alive? 'Alive at the end of the saga': 'Dead at the end of the saga' }</p>
-        <Link className='CharacterDetails__back' to='/'>Go back</Link>
+        <Link className='CharacterDetails__back' to='/'>༄  Go back</Link>
         </section>
       </div>
     );
