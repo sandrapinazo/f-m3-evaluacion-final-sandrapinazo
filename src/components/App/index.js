@@ -10,9 +10,11 @@ class App extends React.Component {
     super(props);
     this.state = {
       characters: [],
-      filter: ""
+      filter: "",
+      filterYear: ""
     };
     this.setFilter = this.setFilter.bind(this);
+    this.setFilterYear = this.setFilterYear.bind(this);
   }
 
   componentDidMount() {
@@ -33,8 +35,14 @@ class App extends React.Component {
   }
 
   setFilter(event) {
-    return this.setState({
+    this.setState({
       filter: event.target.value
+    });
+  }
+
+  setFilterYear(event) {
+    this.setState({
+      filterYear: event.target.value
     });
   }
 
@@ -51,13 +59,24 @@ class App extends React.Component {
               path="/"
               render={routerProps => (
                 <React.Fragment>
-                  <Filter handler={this.setFilter} value={this.state.filter} />
+                  <Filter
+                    handler={this.setFilter}
+                    value={this.state.filter}
+                    handlerYear={this.setFilterYear}
+                    valueYear={this.state.filterYear}
+                  />
                   <CharacterList
-                    data={this.state.characters.filter(item =>
-                      item.name
-                        .toUpperCase()
-                        .includes(this.state.filter.toUpperCase())
-                    )}
+                    data={this.state.characters
+                      .filter(item =>
+                        item.name
+                          .toUpperCase()
+                          .includes(this.state.filter.toUpperCase())
+                      )
+                      .filter(item =>
+                        !this.state.filterYear
+                          ? true
+                          : item.yearOfBirth >= parseInt(this.state.filterYear)
+                      )}
                   />
                 </React.Fragment>
               )}
